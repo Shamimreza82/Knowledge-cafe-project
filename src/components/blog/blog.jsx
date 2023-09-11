@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Blog = ({blog}) => {
+const Blog = ({blog, handlebookmarks}) => {
     const {title, cover, author, author_img,hashtags, posted_date, name, reading_time} = blog
     return (
         <div className='mb-20'>
@@ -15,7 +15,7 @@ const Blog = ({blog}) => {
                 </div>
                 <div>
                     <span>{reading_time}</span>
-                    <button>b</button>
+                    <button onClick={() => handlebookmarks(blog)}>b</button>
                 </div>
             </div>
             <h1 className='text-4xl my-4'>{title}</h1>
